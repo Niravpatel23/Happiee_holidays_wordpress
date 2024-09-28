@@ -1,0 +1,992 @@
+/*!
+Theme Name: WP Tour Package
+Theme URI: https://rarathemes.com/wordpress-themes/tour-package/
+Author: Rara Theme
+Author URI: https://rarathemes.com/
+Description: WP Tour Package is a responsive WordPress theme for tour and travel package booking. It is a good fit for all kinds of tours and travel operators. It uses WP Travel Engine WordPress plugin (https://wordpress.org/plugins/wp-travel-engine/). You can add trips, destinations, and trip types, feature travel activities, highlight your specialties and allow visitors to book the trips. The stunning design combined with modern CSS effects and animation will make your visitors feel like they are already on a trip. WP Tour Package WordPress theme is speed optimized, translation ready, SEO-friendly and mobile-friendly. Apart from travel booking companies, you can also use WP Tour Package theme for travel blogging, hotel, spa, bed and breakfast, luxury resort, reservation, tour operator, tourism, transports and car booking. Check the demo at https://rarathemes.com/previews/?theme=tour-package/, documentation at https://docs.rarathemes.com/docs/tour-package/, and get support at https://rarathemes.com/support-ticket/.
+Template: travel-agency
+Version: 1.1.0
+Requires PHP: 5.6
+Tested up to: 5.8
+Requires at least: 4.9
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wp-tour-package
+Tags: blog, one-column, two-columns, right-sidebar, footer-widgets, custom-background, custom-header, custom-menu, custom-logo, featured-images, threaded-comments, rtl-language-support, translation-ready, theme-options
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Tour Package is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+/*===================================
+ Header Four style
+===================================*/
+.header-four {
+    position: relative;
+    z-index: 2;
+}
+
+.header-four .header-t {
+    padding: 0;
+}
+
+.header-four .header-t .left {
+    float: left;
+}
+
+.header-four .header-t .opening-time {
+    float: left;
+    margin-right: 20px;
+    padding: 12px 20px 11px 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-four .header-t .opening-time svg {
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.header-four .header-t .email-link {
+    float: left;
+    color: #fff;
+    padding: 12px 0 11px;
+}
+
+.header-four .header-t .email-link svg {
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.header-four .header-t .right {
+    float: right;
+}
+
+.header-four .social-networks li {
+    margin: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-four .social-networks li:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-four .social-networks li a {
+    color: #fff;
+    padding: 11px 10px;
+}
+
+/* .widget_search .search-form input[type="submit"] {
+    background: #00aeef url(images/bg-search.png) no-repeat 50% 50%;
+} */
+
+@media only screen and (min-width: 1025px) {
+    .header-four .main-navigation {
+        float: left;
+        width: auto;
+    }
+
+    .header-four .main-navigation>div>ul>li {
+        margin: 0;
+        border-right: 1px solid #e5e5e5;
+    }
+
+    .header-four .main-navigation>div>ul>li.menu-item-has-children:after {
+        right: 15px;
+    }
+
+    .header-four .main-navigation>div>ul>li:first-child {
+        border-left: 1px solid #e5e5e5;
+    }
+
+    .header-four .main-navigation>div>ul>li>a {
+        padding: 10px 22px;
+    }
+
+    .header-four .main-navigation>div>ul>li>a:hover,
+    .header-four .main-navigation>div>ul>li>a:focus {
+        color: #111;
+    }
+
+    .header-four .main-navigation>div>ul>li:hover,
+    .header-four .main-navigation>div>ul>li:focus {
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    .header-four .main-navigation>div>ul>li:hover:after,
+    .header-four .main-navigation>div>ul>li:focus:after {
+        color: #111;
+    }
+
+    .header-four .main-navigation>div>ul>.current-menu-item,
+    .header-four .main-navigation>div>ul>.current-menu-ancestor,
+    .header-four .main-navigation>div>ul>.current_page_item,
+    .header-four .main-navigation>div>ul>.current_page_ancestor {
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    .header-four .main-navigation>div>ul>.current-menu-item>a,
+    .header-four .main-navigation>div>ul>.current-menu-ancestor>a,
+    .header-four .main-navigation>div>ul>.current_page_item>a,
+    .header-four .main-navigation>div>ul>.current_page_ancestor>a {
+        color: #111;
+    }
+}
+
+.header-four .languages {
+    margin-right: 20px;
+    padding: 10px 20px 10px 0;
+    border-right: 1px solid #e5e5e5;
+}
+
+.header-four .languages ul {
+    z-index: 1;
+}
+
+.header-four .languages li a {
+    color: #666;
+}
+
+.header-four .tools .form-section {
+    margin: 0;
+    padding: 10px 0;
+    border: 0;
+}
+
+.header-four .tools .form-section a {
+    color: #666;
+    font-size: 18px;
+}
+
+.banner .form-holder .text .btn-banner {
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 50px;
+    -webkit-transition: ease 0.2s;
+    -moz-transition: ease 0.2s;
+    transition: ease 0.2s;
+}
+
+.banner .form-holder .text .btn-banner:hover,
+.banner .form-holder .text .btn-banner:focus {
+    text-decoration: none;
+    background: #fff;
+    color: #00aeef;
+}
+
+/*=====================================
+ For Color Scheme
+=====================================*/
+a {
+    color: #00aeef;
+}
+
+.header-four .header-t,
+.about .text-holder .title:after,
+.about .text-holder .btn-more:hover,
+.about .text-holder .btn-more:focus,
+.activities .section-header .section-title:after,
+.popular-destination .section-header .section-title:after,
+.popular-destination .grid .col .price-holder,
+.popular-destination .btn-holder .btn-more:hover,
+.popular-destination .btn-holder .btn-more:focus,
+.our-features .section-header .section-title:after,
+.featured-trip .section-header .section-title:after,
+.featured-trip .grid .img-holder .price-holder,
+.featured-trip .grid .text-holder .btn-more:hover,
+.featured-trip .grid .text-holder .btn-more:focus,
+.featured-trip .btn-holder .btn-more:hover,
+.featured-trip .btn-holder .btn-more:focus,
+.stats .section-header .section-title:after,
+.stats .grid .col .raratheme-sc-holder .hs-counter:after,
+.our-deals .section-header .section-title:after,
+.our-deals .grid .img-holder .price-holder,
+.our-deals .grid .text-holder .btn-more:hover,
+.our-deals .grid .text-holder .btn-more:focus,
+.our-deals .btn-holder .btn-more:hover,
+.our-deals .btn-holder .btn-more:focus,
+.blog-section .section-header .section-title:after,
+.blog-section .grid .post .img-holder .cat-links a,
+.blog-section .btn-holder .btn-more:hover,
+.blog-section .btn-holder .btn-more:focus,
+.widget .widget-title:after,
+.page-header .page-title:after,
+.archive .trip-content-area .grid .img-holder .price-holder,
+.archive .trip-content-area .grid .text-holder .btn-more:hover,
+.archive .trip-content-area .grid .text-holder .btn-more:focus,
+.archive .trip-content-area .grid .text-holder .wp-travel-engine-cart:hover,
+.archive .trip-content-area .grid .text-holder .wp-travel-engine-cart:focus,
+.related-post .title:after,
+.related-post .col .img-holder .cat-links a,
+.comments-area .comment-reply-title:after,
+.page-header .page-title:after,
+.pagination a:after,
+.pagination span:after,
+.single-trip .trip-post .entry-header .entry-title:after,
+#tabs-container .tab-inner-wrapper .tab-anchor-wrapper .nav-tab-active,
+.itinerary-row:before,
+#tabs-container .tab-content h1:after,
+#tabs-container .tab-content h2:after,
+#tabs-container .tab-content h3:after,
+#tabs-container .tab-content h4:after,
+#tabs-container .tab-content h5:after,
+#tabs-container .tab-content h6:after,
+.trip-content-area .widget-area .trip-price .price-holder,
+.wp-travel-engine-order-form-wrapper .trip-title,
+.trip-search form .advanced-search-field-submit input[type="submit"]:hover,
+.trip-search form .advanced-search-field-submit input[type="submit"]:focus {
+    background: #00aeef;
+}
+
+.site-branding .site-title a:hover,
+.site-branding .site-title a:focus,
+#activities-slider .text-holder .btn-more:hover,
+#activities-slider .text-holder .btn-more:focus,
+#activities-slider .owl-next:after,
+#activities-slider .owl-prev:after,
+#destination-slider .owl-prev:after,
+#destination-slider .owl-next:after,
+.popular-destination .grid .col .text-holder .title a:hover,
+.popular-destination .grid .col .text-holder .title a:focus,
+.popular-destination .grid .col .text-holder .meta-info svg,
+.our-features .features-holder .col .icon-holder,
+.featured-trip .grid .text-holder .title a:hover,
+.featured-trip .grid .text-holder .title a:focus,
+.featured-trip .grid .text-holder .meta-info svg,
+.our-deals .grid .text-holder .title a:hover,
+.our-deals .grid .text-holder .title a:focus,
+.our-deals .grid .text-holder .meta-info svg,
+.blog-section .grid .post .text-holder .posted-on a:hover,
+.blog-section .grid .post .text-holder .posted-on a:focus,
+.blog-section .grid .post .text-holder .entry-title a:hover,
+.blog-section .grid .post .text-holder .entry-title a:focus,
+.blog-section .grid .post .entry-footer span svg,
+.blog-section .grid .post .entry-footer a:hover,
+.blog-section .grid .post .entry-footer a:focus,
+.site-footer .footer-b a:hover,
+.site-footer .footer-b a:focus,
+#crumbs .separator,
+.archive .trip-content-area .grid .text-holder .title a:hover,
+.archive .trip-content-area .grid .text-holder .title a:focus,
+.archive .trip-content-area .grid .text-holder .meta-info svg,
+.page-template-template-activities .activities-holder .item .text-holder .btn-more:hover,
+.page-template-template-activities .activities-holder .item .text-holder .btn-more:focus,
+.page-template-template-trip_types .trip_types-holder .item .text-holder .btn-more:hover,
+.page-template-template-trip_types .trip_types-holder .item .text-holder .btn-more:focus,
+#primary .post .entry-header .entry-meta .posted-on a:hover,
+#primary .post .entry-header .entry-meta .posted-on a:focus,
+#crumbs a:hover,
+#crumbs a:focus,
+#primary .post .entry-header .entry-title a:hover,
+#primary .post .entry-header .entry-title a:focus,
+#primary .post .entry-footer .meta-info svg,
+#primary .page .entry-footer .meta-info svg,
+#primary .post .entry-footer .meta-info a:hover,
+#primary .post .entry-footer .meta-info a:focus,
+#primary .page .entry-footer .meta-info a:hover,
+#primary .page .entry-footer .meta-info a:focus,
+#primary .post .entry-footer .btn-holder .btn-more:hover,
+#primary .post .entry-footer .btn-holder .btn-more:focus,
+.post-navigation .nav-holder a:hover .post-title,
+.post-navigation .nav-holder a:focus .post-title,
+.related-post .col .text-holder .posted-on a:hover,
+.related-post .col .text-holder .posted-on a:focus,
+.related-post .col .text-holder .post-title a:hover,
+.related-post .col .text-holder .post-title a:focus,
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.widget ul li a:hover,
+.widget ul li a:focus,
+.widget_raratheme_popular_post ul li .entry-header .entry-title a:hover,
+.widget_raratheme_popular_post ul li .entry-header .entry-title a:focus,
+.widget_raratheme_recent_post ul li .entry-header .entry-title a:hover,
+.widget_raratheme_recent_post ul li .entry-header .entry-title a:focus,
+.widget_raratheme_popular_post ul li .entry-header .entry-meta a:hover,
+.widget_raratheme_popular_post ul li .entry-header .entry-meta a:focus,
+.widget_raratheme_recent_post ul li .entry-header .entry-meta a:hover,
+.widget_raratheme_recent_post ul li .entry-header .entry-meta a:focus,
+.pagination .current,
+.pagination a:hover,
+.pagination a:focus,
+.pagination .next:before,
+.pagination .prev:before,
+.single-trip #wte_enquiry_contact_form .package-name-holder .input,
+.trip-facts-value .trip-facts-text label,
+.trip-facts-value .trip-facts-textarea label,
+#crumbs span.current,
+.fixed-starting .dd-list table tbody .accordion-cost svg,
+.dd-list table tr td svg {
+    color: #00aeef;
+}
+
+.about .text-holder .btn-more,
+.popular-destination .btn-holder .btn-more,
+.featured-trip .grid .text-holder .btn-more,
+.featured-trip .btn-holder .btn-more,
+.our-deals .grid .text-holder .btn-more,
+.our-deals .btn-holder .btn-more,
+.blog-section .btn-holder .btn-more,
+.archive .trip-content-area .grid .text-holder .btn-more,
+.archive .trip-content-area .grid .text-holder .wp-travel-engine-cart {
+    border-color: #00aeef;
+}
+
+.popular-destination .grid .col .price-holder span:after,
+.featured-trip .grid .img-holder .price-holder span:after,
+.our-deals .grid .img-holder .price-holder span:after,
+.archive .trip-content-area .grid .img-holder .price-holder span:after {
+    border-bottom-color: #00aeef;
+}
+
+.popular-destination .grid .col .price-holder span:before,
+.featured-trip .grid .img-holder .price-holder span:before,
+.our-deals .grid .img-holder .price-holder span:before,
+.archive .trip-content-area .grid .img-holder .price-holder span:before,
+#tabs-container .tab-inner-wrapper .tab-anchor-wrapper .nav-tab-active:after {
+    border-top-color: #00aeef;
+}
+
+#activities-slider .owl-prev:hover circle,
+#activities-slider .owl-next:hover circle,
+#destination-slider .owl-prev:hover circle,
+#destination-slider .owl-next:hover circle,
+.our-features .features-holder .col:hover circle,
+.our-features .features-holder .col:focus circle {
+    stroke: #00aeef;
+}
+
+.cta .text .btn-more,
+#primary .post .entry-header .entry-meta .cat-links a:hover,
+#primary .post .entry-header .entry-meta .cat-links a:focus,
+#primary .post .entry-footer .btn-holder .btn-more,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    background: #00aeef;
+    border-color: #00aeef;
+}
+
+#primary .post .entry-header .entry-meta .cat-links a {
+    border-color: rgba(0, 174, 239, 0.1);
+}
+
+#primary .post .entry-content blockquote,
+#primary .page .entry-content blockquote {
+    border-left-color: #00aeef;
+}
+
+.trip-search form .advanced-search-field .custom-select:before {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2300aeef' viewBox='0 0 384 512'%3E%3Cpath d='M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z'/%3E%3C/svg%3E") center center no-repeat;
+}
+
+.trip-search form .trip-duration strong:before {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2300aeef' viewBox='0 0 448 512'%3E%3Cpath d='M436 160H12c-6.6 0-12-5.4-12-12v-36c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48v36c0 6.6-5.4 12-12 12zM12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm116 204c0-6.6-5.4-12-12-12H76c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40zm0-128c0-6.6-5.4-12-12-12H76c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40zm128 128c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40zm0-128c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40zm128 128c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40zm0-128c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40z'/%3E%3C/svg%3E") center center no-repeat;
+}
+
+.trip-search form .trip-cost strong:before {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2300aeef' viewBox='0 0 288 512'%3E%3Cpath d='M211.9 242.1L95.6 208.9c-15.8-4.5-28.6-17.2-31.1-33.5C60.6 150 80.3 128 105 128h73.8c15.9 0 31.5 5 44.4 14.1 6.4 4.5 15 3.8 20.5-1.7l22.9-22.9c6.8-6.8 6.1-18.2-1.5-24.1C240.4 74.3 210.4 64 178.8 64H176V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C60.3 64 14.9 95.8 3.1 143.6c-13.9 56.2 20.2 111.2 73 126.3l116.3 33.2c15.8 4.5 28.6 17.2 31.1 33.5C227.4 362 207.7 384 183 384h-73.8c-15.9 0-31.5-5-44.4-14.1-6.4-4.5-15-3.8-20.5 1.7l-22.9 22.9c-6.8 6.8-6.1 18.2 1.5 24.1 24.6 19.1 54.6 29.4 86.3 29.4h2.8v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48h2.5c49.2 0 94.6-31.8 106.4-79.6 13.9-56.2-20.2-111.2-73-126.3z'/%3E%3C/svg%3E") center center no-repeat;
+}
+
+#activities-slider .owl-prev:after,
+#destination-slider .owl-prev:after {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2300aeef' viewBox='0 0 192 512'%3E%3Cpath d='M192 127.338v257.324c0 17.818-21.543 26.741-34.142 14.142L29.196 270.142c-7.81-7.81-7.81-20.474 0-28.284l128.662-128.662c12.599-12.6 34.142-3.676 34.142 14.142z'/%3E%3C/svg%3E") center center no-repeat;
+}
+
+#activities-slider .owl-next:after,
+#destination-slider .owl-next:after {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2300aeef' viewBox='0 0 192 512'%3E%3Cpath d='M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z'/%3E%3C/svg%3E") center center no-repeat;
+}
+
+
+/*Grid List Design adjustments*/
+.category-main-wrap.category-grid .category-trip-prc-title-wrap .category-trip-budget .price-holder {
+    background: #00aeef;
+    font-size: 18px;
+}
+
+.category-main-wrap.category-grid .category-trip-prc-title-wrap .category-trip-budget .price-holder .striked-price,
+.category-main-wrap.category-grid .category-trip-prc-title-wrap .category-trip-budget .price-holder .actual-price {
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 1;
+}
+
+.category-main-wrap.category-grid .category-trip-prc-title-wrap .category-trip-budget .price-holder:after {
+    border-bottom: 20px solid #00aeef;
+}
+
+.category-main-wrap.category-grid .category-trip-prc-title-wrap .category-trip-budget .price-holder:before {
+    border-top: 20px solid #00aeef;
+}
+
+.category-main-wrap.category-grid .category-trips-single-inner-wrap .category-trip-detail-wrap .category-trip-desti .category-trip-dur i svg,
+.category-main-wrap.category-grid .category-trips-single-inner-wrap .category-trip-detail-wrap .category-trip-desti .category-trip-loc i svg,
+.category-list .category-trips-single-inner-wrap .category-trip-detail-wrap .category-trip-desti .category-trip-dur i svg,
+.category-list .category-trips-single-inner-wrap .category-trip-detail-wrap .category-trip-desti .category-trip-loc i svg {
+    fill: #00aeef;
+}
+
+.category-list .category-trips-single-inner-wrap .category-trip-detail-wrap .category-trip-desti .category-trip-loc span a:hover,
+.category-main-wrap.category-grid .category-trip-prc-title-wrap .category-trip-title a:hover {
+    color: #00aeef;
+}
+
+.category-main-wrap.category-grid .category-trips-single-inner-wrap .category-trip-detail-wrap .category-trip-desti .category-trip-loc span a:hover,
+.category-main-wrap.category-grid .category-trip-prc-title-wrap .category-trip-title a:hover {
+    color: #00aeef;
+}
+
+.category-main-wrap.category-grid .category-trips-single-inner-wrap .category-trip-aval-time .category-trip-viewmre-btn,
+.category-list .category-trips-single-inner-wrap .category-trip-aval-time .category-trip-viewmre-btn {
+    color: #00aeef;
+    border-color: #00aeef;
+}
+
+.category-main-wrap.category-grid .category-trips-single-inner-wrap .category-trip-aval-time .category-trip-viewmre-btn:hover,
+.category-list .category-trips-single-inner-wrap .category-trip-aval-time .category-trip-viewmre-btn:hover {
+    color: #FFF;
+    background: #00aeef;
+}
+
+.category-list .category-trips-single-inner-wrap .category-trip-fig .pop-trip-grpavil-icon,
+.category-main-wrap.category-grid .category-trips-single-inner-wrap .category-trip-fig .pop-trip-grpavil-icon {
+    background: #00aeef;
+}
+
+.category-list .category-trips-single-inner-wrap .category-trip-fig .pop-trip-grpavil-txt,
+.category-trips-single .category-trips-single-inner-wrap .category-trip-fig .pop-trip-grpavil-txt,
+.category-list .category-trips-single-inner-wrap .category-trip-prc-title-wrap .category-trip-budget .price-holder span.striked-price {
+    color: #00aeef;
+}
+
+.category-main-wrap.category-grid .category-trips-single-inner-wrap .category-trip-fig .category-disc-feat-wrap {
+    top: 20px;
+}
+
+.category-list .category-trips-single-inner-wrap .category-trip-fig .category-trip-discount,
+.category-main-wrap.category-grid .category-trips-single-inner-wrap .category-trip-fig .category-trip-discount {
+    background: #e54b4b;
+    color: #FFF;
+    -webkit-border-radius: 0 5px 0 0;
+    border-radius: 0 5px 0 0;
+}
+
+.category-list .category-trips-single-inner-wrap .category-trip-fig .category-trip-discount:after,
+.category-main-wrap.category-grid .category-trips-single-inner-wrap .category-trip-fig .category-trip-discount:after {
+    background: #830000;
+    border-bottom-right-radius: 4px;
+    bottom: -6px;
+    content: "";
+    height: 6px;
+    right: 0;
+    position: absolute;
+    width: 6px;
+}
+
+.category-list .category-trips-single-inner-wrap .category-trip-fig .category-trip-discount .discount-offer,
+.category-main-wrap.category-grid .category-trips-single-inner-wrap .category-trip-fig .category-trip-discount .discount-offer {
+    font-size: 16px;
+    display: block;
+    padding: 6px 15px;
+}
+
+.category-list .category-trips-single-inner-wrap .category-trip-fig .category-trip-discount .discount-offer:before,
+.category-main-wrap.category-grid .category-trips-single-inner-wrap .category-trip-fig .category-trip-discount .discount-offer:before {
+    width: 0;
+    height: 0;
+    border-top: 17px solid #e54b4b;
+    border-left: 15px solid transparent;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    content: '';
+}
+
+.category-list .category-trips-single-inner-wrap .category-trip-fig .category-trip-discount .discount-offer:after,
+.category-main-wrap.category-grid .category-trips-single-inner-wrap .category-trip-fig .category-trip-discount .discount-offer:after {
+    width: 0;
+    height: 0;
+    border-bottom: 17px solid #e54b4b;
+    border-left: 15px solid transparent;
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+    content: '';
+}
+
+.category-list .category-trips-single {
+    padding: 0 15px;
+}
+
+.category-list .category-trips-single:last-of-type {
+    margin-bottom: 50px;
+}
+
+.next-trip-info .next-departure-list li .left {
+    color: #00aeef;
+}
+
+.category-list .category-trips-single-inner-wrap .next-trip-info .next-departure-list li .left svg,
+.category-main-wrap.category-grid .category-trips-single-inner-wrap .next-trip-info .next-departure-list li .left svg {
+    fill: #00aeef;
+}
+
+.grid-latest .group-discount .pop-trip-grpavil-icon,
+.trip-search-result #primary .advanced-search-wrapper .sidebar h2:after,
+.trip-search-result #primary .advanced-search-wrapper .sidebar ul li [type="checkbox"]:not(:checked)+span:after,
+.trip-search-result #primary .advanced-search-wrapper .sidebar ul li [type="checkbox"]:checked+span:after {
+    background: #00AEEF;
+}
+
+.grid-latest .group-discount .tooltip {
+    width: max-content;
+    color: #00AEEF;
+}
+
+.featured-trip .grid-latest .text-holder .category-trip-loc svg,
+.our-deals .grid-latest .text-holder .category-trip-loc svg,
+.featured-trip .grid-latest .text-holder .meta-info svg,
+.our-deals .grid-latest .text-holder .meta-info svg {
+    fill: #00AEEF;
+}
+
+.featured-trip .grid-latest .text-holder .category-trip-loc span a:hover,
+.our-deals .grid-latest .text-holder .category-trip-loc span a:hover {
+    color: #00AEEF;
+}
+
+.trip-search-result #primary .advanced-search-wrapper .sidebar ul li [type="checkbox"]:checked+span:before {
+    border-color: #00AEEF;
+}
+
+.review-wrap .average-rating .aggregate-rating .stars,
+.overall-rating-wrap .rating-bar-outer-wrap .rating-bar .rating-bar-inner,
+.category-main-wrap.category-grid .category-trip-prc-title-wrap .category-trip-budget:after {
+    background: #00aeff;
+}
+
+.review-wrap .average-rating .aggregate-rating .stars:before {
+    border-right: 5px solid #00aeff;
+}
+
+.single-trip #wte_enquiry_contact_form .package-name-holder .wp-travel-engine-info {
+    color: #00aeff;
+}
+
+.wpte-bf-price-wrap .wpte-bf-price:last-child {
+    background: rgba(0, 174, 239, 0.08);
+}
+
+.wpte-bf-price-wrap .wpte-bf-price del {
+    color: rgba(0, 174, 239, 0.8);
+}
+
+.wpte-bf-toggle-wrap .wpte-bf-toggle-title {
+    background: rgba(0, 174, 239, 0.8);
+}
+
+.wpte-bf-toggle-wrap .wpte-bf-toggle-title:hover,
+.wpte-bf-datepicker .ui-datepicker td a.ui-state-default {
+    background: rgba(0, 174, 239, 1);
+}
+
+.wpte-bf-booking-steps .wpte-bf-step-wrap .wpte-bf-step.active,
+.wpte-bf-help-block a,
+.wpte-bf-step-content .wpte-bf-number-field button:hover,
+.wpte-bf-step-content .wpte-bf-price ins,
+.wte-bf-price-detail .wpte-bf-toggle-wrap .wpte-bf-toggle-title,
+.wpte-bf-step-content-wrap .wpte-bf-toggle-content .wpte-bf-total b,
+.wpte-bf-step-content-wrap .wpte-bf-btn-wrap input.wpte-bf-btn:hover,
+.wpte-bf-submit input[type="submit"]:hover,
+.wpte-bf-step-content-wrap .wpte-bf-btn-wrap input.wpte-bf-btn:focus,
+.wpte-bf-submit input[type="submit"]:focus,
+.wpte-bf-checkout .wpte-bf-booking-steps .wpte-bf-step-wrap .wpte-bf-step::before,
+.wpte-bf-step-content .wpte-bf-number-field button {
+    color: rgba(0, 174, 239, 1);
+}
+
+.wpte-bf-step-content-wrap .wpte-bf-btn-wrap input.wpte-bf-btn,
+.wpte-bf-submit input[type="submit"] {
+    background: rgba(0, 174, 239, 1);
+    border: 1px solid rgba(0, 174, 239, 1);
+}
+
+.wpte-bf-datepicker .ui-datepicker-inline .ui-widget-header {
+    background: rgba(0, 174, 239, 0.07);
+}
+
+.wpte-bf-step-content .wpte-bf-number-field {
+    border: 1px solid rgba(0, 174, 239, 0.4);
+}
+
+.wpte-bf-step-content .wpte-bf-number-field button {
+    background: rgba(0, 174, 239, 0.03);
+    border: solid 1px rgba(0, 174, 239, 0.05);
+}
+
+.wte-bf-price-detail .wpte-bf-toggle-wrap .wpte-bf-toggle-title {
+    background: rgba(0, 174, 239, 0.1);
+    color: rgba(0, 174, 239, 1);
+}
+
+.wpte-bf-checkout .wpte-bf-booking-steps .wpte-bf-step-wrap .wpte-bf-step.completed::before {
+    background-color: rgba(0, 174, 239, 0.1);
+    background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%232bbad8" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path></svg>');
+}
+
+.wpte-bf-checkout .wpte-bf-booking-steps .wpte-bf-step-wrap .wpte-bf-step.active::before,
+.wpte-bf-checkout .wpte-bf-booking-steps .wpte-bf-step-wrap .wpte-bf-step.active::after {
+    background-color: rgba(0, 174, 239, 1);
+}
+
+.wpte-bf-checkout .wpte-bf-booking-steps .wpte-bf-step-wrap .wpte-bf-step::before {
+    border-color: rgba(0, 174, 239, 0.1);
+}
+
+.wpte-bf-checkout .wpte-bf-booking-steps .wpte-bf-step-wrap .wpte-bf-step::after {
+    background-color: rgba(0, 174, 239, 0.1);
+}
+
+.wpte-bf-checkout .wpte-bf-summary-total {
+    border-top: 1px solid rgba(0, 174, 239, 1);
+}
+
+.widget_calendar table tbody td a,
+.widget_calendar caption {
+    background: #00aeef;
+}
+
+@media only screen and (max-width: 1024px) {
+    .header-four .tools {
+        margin: 5px 15px 0 0;
+    }
+
+    .header-four .tools .form-section a {
+        color: #fff;
+    }
+
+    .header-four .tools .form-section {
+        padding: 0;
+    }
+
+    .header-four .tools .form-section .form-holder {
+        top: 40px;
+    }
+
+    .nav-holder .container,
+    #site-navigation {
+        background: #00aeef;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .header-four .header-t .left,
+    .header-four .header-t .right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-four .header-t .opening-time {
+        float: none;
+        display: inline-block;
+        padding-right: 0;
+        border-right: 0;
+        margin: 0 10px;
+    }
+
+    .header-four .header-t .email-link {
+        float: none;
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .header-four .social-networks {
+        width: 100%;
+    }
+
+    .header-four .social-networks li {
+        float: none;
+        display: inline-block;
+        border: 0;
+    }
+
+    .header-four .social-networks li:first-child {
+        border-left: 0;
+    }
+
+    .header-four .tools .form-section .form-holder {
+        right: auto;
+        left: -92px;
+    }
+
+    .header-four .tools .form-section .form-holder:before,
+    .header-four .tools .form-section .form-holder:after {
+        right: auto;
+        left: 100px;
+    }
+}
+
+/* Custom CSS */
+.mobile-menu-wrapper .mobile-navigation {
+    background: #00aeef;
+}
+
+/* Underline fixes */
+
+.entry-content a:hover,
+.entry-summary a:hover,
+.page-content a:hover,
+.comment-content a:hover,
+.widget .textwidget a:hover {
+    color: #00aeef;
+}
+/* Search button fixes */
+
+.widget_search .search-form input[type="submit"] {
+    background-color: #00aeef;
+}
+
+
+/* WTE plugin Fixes */
+
+.widget-area .wpte-booking-area .wpte-bf-btn-wrap .wpte-bf-btn,
+.wte-process-layout .wte-popup-sidebar .wte-booking-summary .wte-booking-summary-info .wte-booking-summary-info-title,
+.wte-process-layout .wte-process-tabs .wte-process-tab-item .wte-process-tab-content-wrapper .flatpickr-calendar .flatpickr-innerContainer .flatpickr-rContainer .dayContainer .flatpickr-day.selected,
+.wte-check-button.checked,
+.wte-process-layout .wte-process-tab-controller .wte-process-btn-next,
+#tabs-container .itinerary-row:before,
+#wte-trips-fixed-departure-dates .accordion-book button,
+.fixed-starting .dd-list table tbody .book-btn, 
+.fixed-starting .dd-list .loadMore,
+.wpte-bf-submit input[type="submit"] {
+    background-color: #00aeef;
+}
+
+.wte-process-layout .wte-process-nav .wte-process-nav-list::before,
+.flatpickr-days .dayContainer .flatpickr-day:hover, 
+.wte-trip-options .wte-trip-guest-wrapper .select-wrapper .wte-qty-number button:hover,
+.wte-process-layout .wte-process-tabs .wte-process-tab-item .wte-process-tab-content-wrapper .flatpickr-calendar .flatpickr-innerContainer .flatpickr-rContainer .dayContainer .flatpickr-day:hover {
+    background-color: rgba(0, 174, 239, 0.5);
+}
+
+.wte-process-layout .wte-process-tabs .wte-process-tab-item .wte-process-tab-content-wrapper .flatpickr-calendar .flatpickr-months .flatpickr-month {
+    background-color: rgba(0, 174, 239, 0.05);
+}
+.widget-area .wpte-booking-area .wpte-booking-footer-text a, 
+.widget-area .wpte-booking-area .wpte-booking-footer-text a:link,
+.wte-popup-sidebar .total-amount span.wpte-currency-code, 
+.wte-popup-sidebar .total-amount .wpte-price.amount,
+.wte-process-layout .wte-process-nav .wte-process-nav-list .wte-process-nav-item.active, 
+.wte-process-layout .wte-process-nav .wte-process-nav-list .wte-process-nav-item.finish,
+.wte-process-layout .wte-process-tab-controller .wte-process-btn-prev,
+.wte-process-tab-content .wte-button-group .wte-check-button,
+.wte-process-tab-content .wte-button-group .wte-check-button:hover,
+.wpte-bf-submit input[type="submit"]:hover,
+#tabs-container .tab-content .expand-all-itinerary:hover,
+.single-trip #wte_enquiry_contact_form .package-name-holder .wp-travel-engine-info{
+    color: #00aeef;
+}
+
+.wte-process-layout .wte-process-tabs .wte-process-tab-item .wte-process-tab-content-wrapper .flatpickr-calendar .flatpickr-innerContainer .flatpickr-rContainer .dayContainer .flatpickr-day.flatpickr-disabled {
+    color: rgba(0, 174, 239, 0.2);
+}
+
+.wte-process-layout .wte-process-tab-controller .wte-process-btn-prev svg path {
+    stroke: #00aeef;
+}
+
+.wte-booking-date-wrap .flatpickr-calendar .flatpickr-months .flatpickr-prev-month svg path, 
+.wte-booking-date-wrap .flatpickr-calendar .flatpickr-months .flatpickr-next-month svg path {
+    fill: #00aeef !important;
+}
+
+.wte-process-layout .wte-popup-sidebar .wte-booking-summary .wte-booking-summary-info .wte-booking-trip-info, 
+.wte-process-layout .wte-popup-sidebar .wte-booking-summary .wte-booking-summary-info .wte-booking-trip-info, 
+.wte-process-layout .wte-popup-sidebar .wte-booking-summary .wte-booking-summary-info .total-amount,
+.wte-trip-options .wte-trip-guest-wrapper .select-wrapper .wte-qty-number,
+.wpte-bf-checkout .wpte-bf-booking-steps .wpte-bf-summary-wrap table tfoot,
+#wte-trips-fixed-departure-dates .accordion-book button,
+.fixed-starting .dd-list table tbody .book-btn,
+.fixed-starting .dd-list .loadMore,
+.wte-check-button.checked,
+.wte-check-button,
+.wte-check-button:hover,
+.wpte-bf-submit input[type="submit"]{
+  border-color: #00aeef;
+}
+
+.wte-process-layout .wte-popup-sidebar, .wte-process-layout .wte-process-nav {
+    border-color:rgba(0, 174, 239, 0.2);
+}
+
+.wte-trip-options .wte-trip-guest-wrapper .select-wrapper .wte-qty-number button {
+    background-color: rgba(0, 174, 239, 0.03);
+}
+
+.wte-process-layout .wte-process-tabs .wte-process-tab-item .wte-process-tab-content-wrapper .flatpickr-calendar .flatpickr-innerContainer .flatpickr-rContainer .dayContainer .flatpickr-day.today {
+    color: #00aeef;
+    background-color: rgba(0, 174, 239, 0.05);
+}
+
+.wte-process-layout .wte-process-tabs .wte-process-tab-item .wte-process-tab-content-wrapper .flatpickr-calendar .flatpickr-innerContainer .flatpickr-rContainer .dayContainer .flatpickr-day.nextMonthDay, 
+.wte-process-layout .wte-process-tabs .wte-process-tab-item .wte-process-tab-content-wrapper .flatpickr-calendar .flatpickr-innerContainer .flatpickr-rContainer .dayContainer .flatpickr-day.prevMonthDay {
+    color: rgba(0, 174, 239, 0.4);
+}
+
+.wte-process-layout .wte-process-tabs .wte-process-tab-item .wte-process-tab-content-wrapper .flatpickr-calendar .flatpickr-innerContainer .flatpickr-rContainer .dayContainer .flatpickr-day:hover {
+    background: rgba(0, 174, 239, 0.5) !important;
+}
+
+.wte-process-layout .wte-process-tab-controller .wte-process-btn-next:hover {
+    background-color: rgba(0, 174, 239, 0.8);
+}
+
+.itinierary-icon-wrap svg path {
+    fill: #00aeef;
+}
+
+#wte-trips-fixed-departure-dates .accordion-book button,
+.fixed-starting .dd-list table tbody .book-btn,
+.fixed-starting .dd-list .loadMore {
+    color: #fff;
+    text-transform: capitalize;
+}
+
+#wte-trips-fixed-departure-dates .accordion-book button:hover,
+.fixed-starting .dd-list table tbody .book-btn:hover,
+.fixed-starting .dd-list .loadMore:hover
+{
+    background: transparent;
+    color: #00aeef;
+}
+
+.itinerary .advanced-itinerary-row .accordion-tabs-toggle .itinerary-title span:hover,#tabs-container .tab-content .altitude-unit-switches span>input[type=radio]:checked+* {
+    color: #00aeef;
+}
+.wte-check-button.checked {
+    color: #fff !important;
+}
+
+.wpte-bf-checkout .wpte-bf-summary-total {
+    border-color: #00aeef;
+}
+
+.wpte-bf-checkout .wpte-bf-booking-steps .wpte-bf-step-wrap .wpte-bf-step.completed::before,
+.wpte-bf-checkout .wpte-bf-booking-steps .wpte-bf-step-wrap .wpte-bf-step::after {
+    background-color: rgba(0, 174, 239, 0.1);
+}
+
+.wpte-bf-checkout .wpte-bf-booking-steps .wpte-bf-step-wrap .wpte-bf-step::before {
+    color: #00aeef;
+}
+.wpte-bf-checkout .wpte-bf-booking-steps .wpte-bf-step-wrap .wpte-bf-step::before {
+    border-color: rgba(0, 174, 239, 0.1);;
+}
+
+.widget_search .search-form input[type="submit"]{
+    background: #00aeef url(./images/bg-search-white.svg);
+    background-size: 17px;
+    background-repeat: no-repeat;   
+    background-position: center;
+}
+.wpte-bf-checkout .wpte-bf-booking-steps .wpte-bf-step-wrap .wpte-bf-step.completed::before {
+  background-image: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%2300aeef" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path></svg>');
+}
+
+/***** WP Travel Engine Block *********/
+
+.wpte-trip-list-wrapper .wpte-trip-single .wpte-trip-budget-wrap .wpte-trip-meta-list .wpte-trip-meta svg path,
+.wpte-trip-list-wrapper .wpte-trip-single.style-3 .wpte-trip-meta svg path,
+.wpte-trip-list-wrapper .wpte-trip-single .wpte-trip-meta svg path,
+.wpte-trip-list-wrapper .wpte-trip-category .wpte-trip-category-title svg path,
+.wpte-trip__search-fields .wpte-trip__adv-field .icon svg path {
+    fill: #00aeef;
+}
+
+#primary .wpte-trip-list-wrapper .category-trip-prc-title-wrap .category-trip-title a:hover, 
+#primary .wpte-trip-list-wrapper .wpte-trip-details-wrap .wpte-trip-title a:hover,
+#primary .wpte-trip-list-wrapper .wpte-trip-category-text-wrap .wpte-trip-category-title a:hover,
+.wpte-trip-list-wrapper .wpte-trip-single .wpte-trip-meta a:hover,
+.advanced-search-wrapper .advanced-search-field .wte-terms-more button,
+.wp-travel-toolbar .wte-ordering .wpte-trip__adv-field .wpte__select-options ul li:hover span,
+.category-list .category-trips-single-inner-wrap .category-trip-prc-title-wrap .category-trip-title a:hover{
+    color: #00aeef;
+}
+
+.wpte-trip-list-wrapper .category-trips-single .category-trips-single-inner-wrap .category-trip-viewmre-btn,
+.wpte-trip-list-wrapper .wpte-trip-single .wpte-trip-btn-wrap .wpte-trip-explore-btn{
+    background-color: #00aeef;
+    border: 1px solid #00aeef;
+    text-decoration: none;
+}
+
+
+.category-trips-single .category-trips-single-inner-wrap .category-trip-aval-time a,
+.category-trips-single .category-trips-single-inner-wrap .category-trip-viewmre-btn{
+    background-color: #00aeef !important;
+    border: 1px solid #00aeef !important;
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.category-trips-single .category-trips-single-inner-wrap .category-trip-aval-time a:hover,
+.category-trips-single .category-trips-single-inner-wrap .category-trip-viewmre-btn:hover{
+    background-color: transparent !important;
+    color: #00aeef !important;
+}
+
+.wpte-trip-list-wrapper .category-trips-single .category-trips-single-inner-wrap .category-trip-viewmre-btn:hover,
+.wpte-trip-list-wrapper .wpte-trip-single .wpte-trip-btn-wrap .wpte-trip-explore-btn:hover{
+    background-color: transparent;
+    color: #00aeef;
+}
+
+.wpte-trip-list-wrapper .wpte-trip-category .wpte-trip-category-img-wrap .wpte-trip-category-overlay,
+.wpte-trip-sfilter-wrapper .wpte-trip__search-fields .wpte-trip__search-submit:hover {
+    background-color: rgba(0,174, 239, 0.8);
+}
+
+.wpte-trip-list-wrapper .wpte-trip-category .wpte-trip-category-img-wrap .wpte-trip-category-btn .wpte-trip-cat-btn:hover,
+.advanced-search-wrapper .clear-search-criteria:hover{
+    color: #00aeef;
+}
+
+.wpte-gblock-wrapper .wte-block-btn-wrapper a{
+    color: #00aeef;
+    border: 1px solid #00aeef;
+    text-decoration: none;
+}
+
+.wpte-gblock-wrapper .wte-block-btn-wrapper a:hover,
+.wpte-trip-list-wrapper .wpte-trip-category.style-3 .trip-count,
+.wpte-trip__search-fields .wpte-trip__search-submit,
+.wpte__select-options .ui-slider .ui-slider-range,
+.wpte__select-options .ui-slider .ui-slider-handle,
+.advanced-search-wrapper .advanced-search-field .ui-slider .ui-slider-range,
+.advanced-search-wrapper .advanced-search-field .ui-slider .ui-slider-handle,
+.advanced-search-wrapper .advanced-search-field .ui-slider .ui-slider-handle::before,
+.wpte-trip__adv-field.wpte__select-field .wpte__select-options ul li.selected,
+.wpte-trip__adv-field.wpte__select-field .wpte__select-options ul li.selected span{
+    background-color: #00aeef;
+}
+
+
+.advanced-search-wrapper .advanced-search-field .ui-slider .ui-slider-handle::after{
+    border-top-color: #00aeef;
+}
+
+.advanced-search-wrapper .advanced-search-field input:checked+span:before{
+    border-color: #00aeef;
+}
+
+#primary .wpte-trip-category.style-1 .wpte-trip-category-text-wrap .wpte-trip-category-title a{
+    color: #ffffff;
+}
